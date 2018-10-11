@@ -1,0 +1,62 @@
+//Core styles
+.lang-switcher {
+  font-weight: 300;
+
+  .lang-switcher__heading {
+    font-weight: inherit;
+    @include rhythm(18, 18);
+  }
+  .lang-switcher__list-item {
+    text-transform: capitalize;
+    @include rhythm(13, 13);
+    &:not(:last-of-type) {
+      margin-right: 25px;
+    }
+    @include goldOnHover(link);
+  }
+
+  .lang-switcher__radio {
+    display: none;
+  }
+  .lang-switcher__radio:checked ~ span {
+    color: var(--gold);
+  }
+}
+
+//End core styles
+
+//Mods
+.lang-switcher--center {
+  text-align: center;
+}
+
+.lang-switcher--vertical {
+  .lang-switcher__list-item {
+    display: block;
+    &:not(:last-of-type) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    };
+  }
+}
+
+.lang-switcher--big {
+  .lang-switcher__list-item {
+    @include rhythm(30, 27);
+  }
+}
+
+.lang-switcher--white {
+  color: var(--white);
+}
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

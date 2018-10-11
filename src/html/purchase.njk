@@ -1,0 +1,97 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--purchase-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Покупка</h1>
+
+      <div class="header__description">
+        <p>Мы покупаем любые ценные монеты,
+включая золотые, серебряные,
+юбилейные и старинные</p>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="in-row in-row--one-half-width section-wrapper section-wrapper--pdt section-wrapper--pdb">
+      <h2 class="section-title">Как продать монеты</h2>
+
+      <div class="container">
+        <div class="in-row__inner">
+          <div class="in-row__item">
+            <img src="../images/content/icon-phone.svg" alt="" class="in-row__img in-row__img--big">
+            <p class="in-row__text">Позвоните нам на <a href="tel:+7 495 120 2716" class="link">+7 495 120 2716</a> для первичной консультации с 11:00 до 20:00 по будням.</p>
+          </div>
+          <div class="in-row__item">
+            <img src="../images/content/icon-polaroid.svg" alt="" class="in-row__img in-row__img--big">
+            <p class="in-row__text">Либо отправьте фото монет в Viber / What's App <a href="tel:+7 495 120 2716" class="link">+7 495 120 2716</a> или через форму оценки монет в любое время.</p>
+          </div>
+          <div class="in-row__item">
+            <img src="../images/content/icon-circul.svg" alt="" class="in-row__img in-row__img--big">
+            <p class="in-row__text">Приезжайте в офис, чтобы получить точную оценку монет в виде документа (бесплатно).</p>
+          </div>
+          <div class="in-row__item">
+            <img src="../images/content/icon-note.svg" alt="" class="in-row__img in-row__img--big">
+            <p class="in-row__text">Согласовываем окончательную цену продажи монет.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-to-sale-coins section-wrapper section-wrapper--pdb-no-on-mobile">
+      <div class="container container--padding-off">
+        <div class="alone-component alone-component--bdt alone-component--bdb">
+          <div class="alone-component__inner">
+            <div class="alone-component__side alone-component__side--left">
+              <img src="../images/content/icon-bag.svg" alt="">
+            </div>
+            <div class="alone-component__side alone-component__side--right">
+              <p>Вы получаете наличные деньги на месте или переводом после доставки монеты в наш офис.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="send-coins-form" class="send-coins-form form-wrapper section-wrapper section-wrapper--gray-bg section-wrapper--pdt section-wrapper--pdb">
+      <h2 class="section-title">Отправить монеты на предварительную оценку</h2>
+
+      <div class="container">
+        {% import 'components/forms/sendCoins.njk' as forms %}
+
+        {{ forms.sendCoins() }}
+      </div>
+    </section>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+// Components library styles
+
+.library {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.library__section {
+  margin-bottom: 55px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.library__item {
+  margin-bottom: 15px;
+}

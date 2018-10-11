@@ -1,0 +1,182 @@
+// Some kind of buttons
+
+// Basic button parameters
+:root {
+  --btn-border-color: var(--black);
+  --btn-color: var(--black);
+  --btn-background: transparent;
+  --btn-padding-y: 13px;
+  --btn-padding-x: 50px;
+  --btn-font-size-base: 14px;
+  --btn-line-height: 1;
+  --btn-border-radius: 33px;
+  --btn-color-hover: var(--gold);
+  --btn-border-color-hover: var(--gold);
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: normal;
+  vertical-align: middle;
+  user-select: none;
+  appearance: none;
+  outline:  none;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: 0.32px;
+  transition: 0.2s ease-in-out;
+  transition-property: color, border-color, background-color;
+  color: var(--btn-color);
+  background-color: transparent;
+  border: 1px solid transparent;
+  @include button-size(var(--btn-padding-y), var(--btn-padding-x), var(--btn-font-size-base), var(--btn-line-height), var(--btn-border-radius));
+  &:hover {
+    cursor: pointer;
+    color: var(--btn-color-hover);
+    border-color: var(--btn-border-color-hover);
+  }
+}
+
+// Black button parameters
+:root {
+  --btn-black-color-hover: var(--gold);
+  --btn-black-border-color: var(--black);
+  --btn-black-border-color-hover: var(--gold);
+}
+
+.btn-black {
+  @extend .btn;
+  border-color: var(--btn-black-border-color);
+  &:hover {
+    color: var(--btn-black-color-hover);
+    border-color: var(--btn-black-border-color-hover);
+  }
+  &:active {
+    color: var(--btn-black-color-hover);
+    border-color: var(--btn-black-border-color-hover);
+  }
+}
+
+// Golden button parameters
+:root {
+  --btn-gold-color: var(--white);
+  --btn-gold-color-hover: var(--gold);
+  --btn-gold-border-color: var(--gold);
+  --btn-gold-bg-color: var(--gold);
+  --btn-gold-bg-color-hover: transparent;
+  --btn-gold-bg-color-active: var(--gray3);
+  --btn-gold-color-active: var(--white);
+  --btn-gold-border-color-hover: var(--gold);
+  --btn-gold-border-color-active: var(--white);
+}
+
+.btn-gold {
+  @extend .btn;
+  background-color: var(--btn-gold-bg-color);
+  border-color: var(--btn-gold-border-color);
+  color: var(--btn-gold-color);
+  &:hover {
+    color: var(--btn-gold-color-hover);
+    border-color: var(--btn-gold-border-color-hover);
+    background-color: var(--btn-gold-bg-color-hover);
+  }
+  &:active {
+    color: var(--btn-gold-color-active);
+    border-color: var(--btn-gold-border-color-active);
+    background-color: var(--btn-gold-bg-color-active);
+  }
+}
+
+// Attention button parameters
+:root {
+  --btn-attention-color: var(--red);
+  --btn-attention-color-hover: var(--white);
+  --btn-attention-border-color: var(--red);
+  --btn-attention-bg-color: transparent;
+  --btn-attention-bg-color-hover: var(--red);
+  --btn-attention-bg-color-active: var(--red);
+  --btn-attention-color-active: var(--white);
+  --btn-attention-border-color-hover: var(--gold);
+  --btn-attention-border-color-active: var(--red);
+}
+
+.btn-attention {
+  @extend .btn;
+  background-color: var(--btn-attention-bg-color);
+  border-color: var(--btn-attention-border-color);
+  color: var(--btn-attention-color);
+  &:hover {
+    color: var(--btn-attention-color-hover);
+    border-color: var(--btn-attention-border-color-hover);
+    background-color: var(--btn-attention-bg-color-hover);
+  }
+  &:active {
+    color: var(--btn-attention-color-active);
+    border-color: var(--btn-attention-border-color-active);
+    background-color: var(--btn-attention-bg-color-active);
+  }
+}
+
+// Exit cross button
+
+.btn-cross {
+  display: inline-block;
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 17px;
+    background-color: var(--black);
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+// Up button
+
+.scroll-top-btn {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 20px auto 0;
+  @media (--m) {
+    display: none;
+  }
+  span {
+    display: block;
+    position: relative;
+    height: 100%;
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 1px;
+      width: 17px;
+      transform: translate(-50%, -50%);
+      background-color: var(--black);
+      transform-origin: 0 50%;
+    }
+
+    &:after {
+      transform: rotate(135deg)
+    }
+
+    &:before {
+      transform: rotate(45deg)
+    }
+  }
+}

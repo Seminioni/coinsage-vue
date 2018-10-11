@@ -1,0 +1,39 @@
+.page__wrapper.page__wrapper--basket-page {
+//Core styles
+
+  .container,
+  .form {
+    max-width: 947px;
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/basket-bg--mobile.jpg',
+      '../images/general/basket-bg--desktop.jpg'
+    )
+  }
+
+
+//End Mods
+
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+//End media queries
+}

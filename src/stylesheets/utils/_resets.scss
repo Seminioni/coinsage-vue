@@ -1,0 +1,43 @@
+// Some kind of resets
+
+
+//Core styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul,
+li,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.njk-include {
+  display: none !important;
+}
+
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

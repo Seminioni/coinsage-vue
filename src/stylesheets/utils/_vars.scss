@@ -1,0 +1,22 @@
+// Variables
+
+:root {
+  --black: #000000;
+  --gold: #B49740;
+  --yellow: #a48632;
+  --gray1: #F7F7F7;
+  --gray2: #87970E;
+  --gray3: #070101;
+  --gray4: #655f5f;
+  --gray5: #8d8d8d;
+  --gray6: #dadada;
+  --red: #E7576B;
+  --green: #6AD67F;
+  --Lato: 'Lato';
+  --white: #fff;
+}
+
+@custom-media --s (width <= 768px);
+@custom-media --m (min-width: 769px);
+@custom-media --xl (min-width: 1025px);
+@custom-media --xl-sm (width <= 1025px);

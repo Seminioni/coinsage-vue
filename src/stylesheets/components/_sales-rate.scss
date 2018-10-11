@@ -1,0 +1,116 @@
+//Core styles
+.sales-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (--m) {
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+}
+.sales-rate__heading {
+  text-align: center;
+  @include rhythm(24,24);
+  @extend .f-weight-light;
+  margin-bottom: 15px;
+  @media (--xl) {
+    margin-bottom: 30px;
+  }
+}
+.sales-rate__subsection {
+  width: 100%;
+  @media (--m) {
+    &:nth-child(even) {
+      margin-left: 217px;
+    }
+  }
+  & + .sales-rate__subsection {
+    margin-top: 25px;
+    @media (--m) {
+      margin-top: 0;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 25px;
+    @media (--m) {
+      margin-bottom: 0;
+    }
+  }
+}
+.sales-rate__subsection-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @extend .f-weight-light;
+  & + .sales-rate__subsection-item {
+    margin-top: 20px;
+  }
+  @media (--m) {
+    align-items: center;
+  }
+}
+
+.sales-rate__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-grow: 0;
+  vertical-align: middle;
+  @include rhythm(12,44);
+  margin-right: 10px;
+  text-align: center;
+  border: 1px solid var(--black);
+  @media (--m) {
+    width: 68px;
+    height: 68px;
+    @include rhythm(18,68);
+    margin-right: 28px;
+  }
+}
+
+.sales-rate__name {
+  @include rhythm(18,18);
+  transform: translateY(50%);
+  text-transform: capitalize;
+  @media (--m) {
+    transform: translateY(0)
+  }
+}
+
+.sales-rate__price {
+  flex-grow: 1;
+  text-align: right;
+
+  @include rhythm(24,24);
+}
+
+.sales-rate__price-income {
+  @include rhythm(18,18);
+}
+
+.sales-rate__memo {
+  color: var(--gray5);
+  @extend .f-weight-light;
+  text-align: center;
+
+}
+//End core styles
+
+//Mods
+.sales-rate__price-income--down {
+  color: var(--red);
+}
+.sales-rate__price-income--up {
+  color: var(--green);
+}
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

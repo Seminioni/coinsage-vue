@@ -1,0 +1,31 @@
+//Core styles
+.burger {
+  width: 54px;
+  height: 45px;
+  @include setTransitionFor(transform);
+  //@include retina-sprite($icon-burger-group);
+  &.active {
+    transform: rotate(90deg);
+  }
+}
+
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+@media (--xl) {
+  .burger {
+    display: none;
+  }
+}
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

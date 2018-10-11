@@ -1,0 +1,75 @@
+{% macro preferences() %}
+<div class="form form--preferences">
+  <form>
+
+    <div class="form__field form__field--group form__field--one-half-width">
+      <label class="label" for="phone">
+        <div class="form__field-heading form__field-heading--group-leader">Телефон
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <span class="memo__text">Используется для уведомлений о состоянии заказа и связи с менеджерами</span>
+          </div>
+        </div>
+        <input type="text" id="phone" placeholder="+7">
+      </label>
+    </div>
+
+    <div class="form__field form__field--group form__field--three-quartes-width">
+      <div class="form__field-heading">Смена пароля
+        </div>
+    </div>
+
+    <div class="form__field form__field--three-quartes-width">
+      <label class="label" for="current-pass">
+        <div class="form__field-subHeading">Текущий пароль
+         </div>
+        <input type="password" id="current-pass" placeholder="введите пароль">
+      </label>
+    </div>
+
+    <div class="form__field form__field--three-quartes-width">
+      <label class="label" for="new-pass">
+        <div class="form__field-subHeading">Новый пароль
+         </div>
+        <input type="password" id="new-pass" placeholder="введите пароль">
+      </label>
+    </div>
+
+    <div class="form__field form__field--three-quartes-width">
+      <label class="label" for="new-pass-repeated">
+        <div class="form__field-subHeading">Повторите новый пароль
+         </div>
+        <input type="password" id="new-pass-repeated" placeholder="введите пароль">
+      </label>
+    </div>
+
+    <div class="form__field form__field--group form__field--three-quartes-width">
+      <div class="form__field-heading">Адрес доставки
+        </div>
+    </div>
+
+    <div class="form__field form__field--simple-text-inside form__field--three-quartes-width">
+        <h4 class="form__field-subHeading">Текущий адрес
+         </h4>
+        <p class="form__text">Москва, Краснопресненский бульвар, стр.9, кв 12</p>
+    </div>
+
+    <div class="form__field">
+      <label class="label" for="address">
+        <div class="form__field-subHeading">Новый адрес
+         </div>
+        <input type="text" id="address" placeholder="введите адрес">
+      </label>
+    </div>
+
+    <div class="form__field form__field--button form__field--centered">
+      <input type="submit" class="btn-black" value="сохранить изменения">
+    </div>
+    <div class="form__field">
+      <div class="memo memo--alone">
+        <span class="memo__text">*Для связи по заказам и восстановлению данных</span>
+      </div>
+    </div>
+  </form>
+</div>
+{% endmacro %}

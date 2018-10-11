@@ -1,0 +1,21 @@
+{% macro subscribe() %}
+  <div class="form form--subscribtion">
+    <div class="form__inner">
+      <div class="form__side form__side--left">
+        <img src="../images/content/img-coin.png" alt="">
+      </div>
+      <div class="form form__side--right">
+        <h3 class="form__heading">Хотите быть в курсе новинок?</h3>
+        <p class="form__clarification">Подписывайтесь на нашу рассылку</p>
+        <form>
+          <div class="form__field">
+            <label for="subscribe" >
+              <input type="email" name="subscribe" id="subscribe" placeholder="email">
+              <input type="submit" value="подписаться">
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

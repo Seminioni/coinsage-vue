@@ -1,0 +1,132 @@
+.page__wrapper.page__wrapper--aboutus-page {
+//Core styles
+
+  .abilities {
+    padding-bottom: 60px;
+    @media (--m) {
+      padding-bottom: 90px;
+    }
+  }
+  .abilities__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    @media (--m) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .abilities__item {
+    text-align: center;
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+    @media (--m) {
+      flex-basis: calc(100% / 3);
+      & + .abilities__item {
+        margin-left: 30px;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .abilities__heading {
+    margin-bottom: 15px;
+    @include rhythm(16,16);
+    @extend .f-weight-normal;
+    @media (--m) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .abilities__text {
+    text-align: left;
+    @extend .f-weight-light;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    @media (--m) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      max-width: 450px;
+      margin: auto;
+    }
+  }
+
+  .advantages__list-item {
+    text-align: center;
+    & + .advantages__list-item {
+      margin-top: 60px;
+    }
+    @media (--m) {
+      & + .advantages__list-item {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .advantages__img {
+    margin-bottom: 20px;
+  }
+
+  .advantages__desc {
+    margin-bottom: 30px;
+    @extend .f-weight-light;
+    @media (--m) {
+      margin-bottom: 45px;
+    }
+  }
+
+  .advantages__heading {
+    @extend .f-weight-normal;
+    max-width: 125px;
+  }
+
+  .fluid-component {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    @media (--m) {
+      padding-top: 110px;
+      padding-bottom: 125px;
+    }
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/aboutus-bg--mobile.jpg',
+      '../images/general/aboutus-bg--desktop.jpg'
+    )
+  }
+
+
+//End Mods
+
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+//End media queries
+}

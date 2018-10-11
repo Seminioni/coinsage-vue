@@ -1,0 +1,32 @@
+//Core styles
+.tippy-popper  {
+  .tippy-tooltip {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    border-radius: 11px;
+    font-style: italic;
+    font-weight: 300;
+    @include rhythm(11,11);
+    color: var(--gold);
+  }
+
+  .tippy-backdrop {
+    background-color: var(--white);
+  }
+}
+
+//End core styles
+
+
+//Mods
+
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

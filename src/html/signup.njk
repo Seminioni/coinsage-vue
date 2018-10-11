@@ -1,0 +1,57 @@
+{% extends 'layouts/application.njk' %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--auth-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Личный кабинет</h1>
+
+      <div class="header__description">
+        <a href="signin.html" class="link-standart">Вход</a>
+        <a href="signup.html" class="link-standart">Регистрация</a>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+
+
+  <main class="main">
+
+
+    <section class="signup-form form-wrapper section-wrapper section-wrapper--pdt section-wrapper--pdb">
+      <h2 class="section-title">Регистрация</h2>
+
+      <div class="container">
+        {% import 'components/forms/signup.njk' as forms %}
+
+        {{ forms.signup() }}
+      </div>
+    </section>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

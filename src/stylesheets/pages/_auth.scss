@@ -1,0 +1,32 @@
+.page__wrapper.page__wrapper--auth-page {
+  //Core styles
+
+  .footer {
+    background-color: var(--gray1);
+  }
+  //End core styles
+
+  //Mods
+    .header--with-bg {
+      @include setHeaderBackgrounds(
+        '../images/general/personal-cabinet-bg--mobile.jpg',
+        '../images/general/personal-cabinet-bg--desktop.jpg'
+      )
+    }
+  //Mods
+  }
+
+
+
+  //End mods
+
+  //Media queries
+
+    //Core styles
+
+    //End core styles
+
+    //Mods
+
+    //End mods
+  //End media queries

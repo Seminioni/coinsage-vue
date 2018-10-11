@@ -1,0 +1,81 @@
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+<div class="catalog-item-wr">
+  <div class="catalog-item">
+      <a href="catalogItemInner.html" class="catalog-item__img">
+        <img src="../images/content/content-3.png" alt="">
+      </a>
+      <a href="catalogItemInner.html" class="link catalog-item__heading">США 20 долларов 1905 </a>
+      <div class="catalog-item__desc-box">
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Состояние:</span>
+          <span class="catalog-item__value">XF</span>
+        </p>
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Год выпуска:</span>
+          <span class="catalog-item__value">1890</span>
+        </p>
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Материал:</span>
+          <span class="catalog-item__value">медь</span>
+        </p>
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Вес:</span>
+          <span class="catalog-item__value">1,28 г</span>
+        </p>
+      </div>
+      <strong class="catalog-item__price catalog-item__price--old-price">59 496 ₽</strong>
+      <a href="catalogItemInner.html" class="link catalog-item__price catalog-item__price--new-price">59 496 ₽</a>
+      <i title="Редкая монета"  class="catalog-item__rare">
+        <span class="icon-text">редкая монета</span>
+        {{ sprite('icon-diamond') }}
+      </i>
+      {{ spriteForLink('icon-favorite') }}
+      {{ spriteForLink('icon-basket') }}
+      <a href="#" class="icon-cross"></a>
+  </div>
+  <div class="catalog-on-hover-item">
+    <a class="catalog-on-hover-item__top-link" href="catalogItemInner.html">
+      <h3 class="catalog-item__heading">США 20 долларов 1905 </h3>
+      <strong class="catalog-item__price catalog-item__price--new-price">59 496 ₽</strong>
+      <strong class="catalog-item__price catalog-item__price--old-price">59 496 ₽</strong>
+      <i class="catalog-item__rare">
+        <span class="icon-text">редкая монета</span>
+        {{ sprite('icon-diamond') }}
+      </i>
+    </a>
+    <div data-controller="coin-slider" class="catalog-item__slider-container">
+      <div data-target="coin-slider.slider" class="catalog-item__slider catalog-item__img">
+          <img src="../images/content/content-3.png" alt="">
+          <img src="../images/content/content-4.jpg" alt="">
+          <img src="../images/content/content-5.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="catalog-item__desc-box">
+      <p class="catalog-item__desc-field">
+        <span class="catalog-item__prop">Состояние:</span>
+        <span class="catalog-item__value">XF</span>
+      </p>
+      <p class="catalog-item__desc-field">
+        <span class="catalog-item__prop">Год выпуска:</span>
+        <span class="catalog-item__value">1890</span>
+      </p>
+      <p class="catalog-item__desc-field">
+        <span class="catalog-item__prop">Материал:</span>
+        <span class="catalog-item__value">медь</span>
+      </p>
+      <p class="catalog-item__desc-field">
+        <span class="catalog-item__prop">Вес:</span>
+        <span class="catalog-item__value">1,28 г</span>
+      </p>
+    </div>
+    <div class="catalog-item__quantity">
+      <span class="catalog-item__quantity-prop">Кол-во:</span>
+      {% include 'components/_stepper.njk' %}
+    </div>
+    <button class="btn-black">в избранное</button>
+    <button class="btn-gold">в корзину</button>
+  </div>
+
+</div>

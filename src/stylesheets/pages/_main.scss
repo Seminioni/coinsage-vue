@@ -1,0 +1,60 @@
+.page__wrapper--main-page {
+//Core styles
+  .available-coins {
+    .section-title {
+      display: none;
+      @media (--m) {
+        display: block;
+      }
+    }
+  }
+  .header {
+    padding-top: 55px;
+    min-height: calc(100vh - 65px);
+    @media (--m) {
+      min-height: 430px;
+      padding-top: 130px;
+    }
+
+    .header__title {
+      @include rhythm(24, 27)
+      @media (--xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .news {
+    @media (--m) {
+      &:nth-child(odd):last-child {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/main-bg--mobile.jpg',
+      '../images/general/main-bg--desktop.jpg'
+    )
+  }
+//End mods
+
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries
+}
+
+

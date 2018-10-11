@@ -1,0 +1,210 @@
+{% macro purchaseRegistration() %}
+<div class="form form--error form--purchase-reg">
+  <form>
+
+    <div class="form__field">
+
+      <div class="filters" data-controller="filters">
+
+        <div class="filters__inner">
+          <div class="select filter">
+          <p class="form__field-heading">Выберите страну</p>
+
+            <select id="select-country">
+              <option value="gold">Россия</option>
+              <option value="argentum">Серебро</option>
+              <option value="platina">Платина</option>
+              <option value="metal">Металл</option>
+            </select>
+          </div>
+          <div class="select filter">
+          <p class="form__field-heading">Выберите город</p>
+            <select id="select-town">
+              <optgroup>
+                <option value="gold">Москва</option>
+                <option value="argentum">Серебро</option>
+              </optgroup>
+              <optgroup>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+                <option value="gold">Монета</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+                <option value="gold">Монета</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+                <option value="gold">Монета</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+                <option value="gold">Монета</option>
+                <option value="argentum">Серебро</option>
+              </optgroup>
+
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="form__field">
+
+      <p class="form__field-heading">Адрес доставки</p>
+      <div class="textarea-wrapper">
+        <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+      </div>
+
+    </div>
+
+    <div class="form__field form__field--one-half-width">
+
+      <p class="form__field-heading">Оплата</p>
+      <div class="radiobtns">
+        <label class="radiobtn">
+          <input type="radio" name="radio" value="0" checked>
+          <span></span>Онлайн
+        </label>
+        <label class="radiobtn">
+          <input type="radio" name="radio" value="0">
+          <span></span>При получении
+        </label>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <label class="label" for="bio">
+        <p class="form__field-heading">Представьтесь, пожалуйста</p>
+        <input type="text" id="bio" placeholder="ФИО">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="email">
+        <div class="form__field-heading">Электронная почта
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <span class="memo__text">На почту придет письмо с паролем для доступа к личному кабинету</span>
+          </div>
+        </div>
+        <input type="email" id="email" placeholder="email">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="phone">
+        <div class="form__field-heading">Телефон
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <i class="memo__star">*</i>
+            <span class="memo__text">Для связи по заказам и восстановлению данных</span>
+          </div>
+        </div>
+        <input type="text" id="phone" placeholder="+7">
+      </label>
+    </div>
+    <div class="form__field form__field--centered">
+      <p class="attention-memo">*Все поля обязательны к заполнению</p>
+    </div>
+    <div class="form__field form__field--centered">
+      <input type="submit" class="btn-black btn-attention" value="перейти к оплате">
+    </div>
+    <div class="form__field">
+      <div class="memo memo--alone">
+        <span class="memo__text">*На почту придет письмо с паролем для доступа к личному кабинету</span>
+      </div>
+      <div class="memo memo--alone">
+        <span class="memo__text">**Для связи по заказам и восстановлению данных</span>
+      </div>
+    </div>
+  </form>
+</div>
+{% endmacro %}
+
+
+{% macro purchaseRegistrationInstance2() %}
+<div class="form form--error form--purchase-reg">
+  <form>
+    <div class="form__field">
+
+      <p class="form__field-heading">Адрес доставки</p>
+
+      <div class="radiobtns radiobtns--vertical">
+        <label class="radiobtn">
+          <input type="radio" name="address" value="0" checked>
+          <span></span>Москва, Краснопресненский бульвар, стр.9, кв 12
+        </label>
+        <label class="radiobtn">
+          <input type="radio" name="address" value="0">
+          <span></span>Другой адрес
+        </label>
+      </div>
+      <div class="textarea-wrapper">
+        <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+      </div>
+
+    </div>
+
+    <div class="form__field form__field--one-half-width">
+
+      <p class="form__field-heading">Оплата</p>
+      <div class="radiobtns">
+        <label class="radiobtn">
+          <input type="radio" name="name" value="0" checked>
+          <span></span>Онлайн
+        </label>
+        <label class="radiobtn">
+          <input type="radio" name="name" value="0">
+          <span></span>При получении
+        </label>
+      </div>
+
+    </div>
+
+    <div class="form__field">
+      <label class="label" for="bio">
+        <p class="form__field-heading">Представьтесь, пожалуйста</p>
+        <input type="text" id="bio" placeholder="ФИО">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="email">
+        <div class="form__field-heading">Электронная почта
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <span class="memo__text">На почту придет письмо с паролем для доступа к личному кабинету</span>
+          </div>
+        </div>
+        <input type="email" id="email" placeholder="email">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="phone">
+        <div class="form__field-heading">Телефон
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <i class="memo__star">*</i>
+            <span class="memo__text">Для связи по заказам и восстановлению данных</span>
+          </div>
+        </div>
+        <input type="text" id="phone" placeholder="+7">
+      </label>
+    </div>
+    <div class="form__field form__field--centered">
+      <p class="attention-memo">*Все поля обязательны к заполнению</p>
+    </div>
+    <div class="form__field form__field--centered">
+      <input type="submit" class="btn-black btn-attention" value="перейти к оплате">
+    </div>
+    <div class="form__field">
+      <div class="memo memo--alone">
+        <span class="memo__text">*На почту придет письмо с паролем для доступа к личному кабинету</span>
+      </div>
+      <div class="memo memo--alone">
+        <span class="memo__text">**Для связи по заказам и восстановлению данных</span>
+      </div>
+    </div>
+  </form>
+</div>
+{% endmacro %}

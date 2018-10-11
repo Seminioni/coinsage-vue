@@ -1,0 +1,55 @@
+.page__wrapper.page__wrapper--purchase-rules-page {
+  //Core styles
+  .main {
+    .purchase-return__logo {
+      margin: auto;
+      display: block;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @media (--m) {
+        margin-top: 60px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .purchase-return__link {
+      @include rhythm(18,21);
+      @extend .f-weight-light;
+      display: block;
+      margin: auto;
+      text-align: center;
+      color: var(--gold);
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/purchase-rules-bg--mobile.jpg',
+      '../images/general/purchase-rules-bg--desktop.jpg'
+    )
+  }
+
+  //End Mods
+
+  //Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+  //End media queries
+}

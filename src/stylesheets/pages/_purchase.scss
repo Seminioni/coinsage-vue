@@ -1,0 +1,44 @@
+.page__wrapper.page__wrapper--purchase-page {
+//Core styles
+
+  .container {
+    max-width: 947px;
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+  .how-to-sale-coins {
+    @media (--m) {
+      max-width: 947px;
+      margin: auto;
+    }
+  }
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/purchase-bg--mobile.jpg',
+      '../images/general/purchase-bg--desktop.jpg'
+    )
+  }
+
+
+//End Mods
+
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+//End media queries
+}

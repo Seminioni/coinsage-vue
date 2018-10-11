@@ -1,0 +1,90 @@
+.page__wrapper.page__wrapper--personal-cabinet-page {
+  //Core styles
+
+  .header__description-field {
+    display: inline-block;
+    & + .header__description-field {
+      margin-top: 3px;
+    }
+  }
+
+  .header__container {
+    .link {
+      text-decoration: none;
+    }
+
+    .link-exit {
+      margin-top: 40px;
+    }
+  }
+
+  .tabs {
+    @media (--m) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .favorite .icon-cross {
+    display: inline-block;
+    right: 5px;
+    top: 0;
+    @media (--m) {
+      right: 15px;
+    }
+  }
+
+  .favorite,
+  .basket,
+  .preferences {
+    @media (--s) {
+      .section-title {
+        display: none;
+      }
+    }
+  }
+
+  .basket,
+  .form {
+    max-width: 947px;
+  }
+
+  .basket__item + .basket__item {
+    @media (--m) {
+      margin-top: 45px;
+    }
+  }
+
+   #purchases {
+     .basket__item-param--state {
+       display: inline-block;
+     }
+   }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/personal-cabinet-bg--mobile.jpg',
+      '../images/general/personal-cabinet-bg--desktop.jpg'
+    )
+  }
+
+  //End Mods
+
+  //Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+  //End media queries
+}

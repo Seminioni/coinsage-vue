@@ -1,0 +1,66 @@
+// Radiobuttons
+
+:root {
+  --radio-size: 20px;
+  --radio-bg-color-inactive: transparent;
+  --radio-bd-color-inactive: var(--black);
+  --radio-bg-color-active: var(--gold);
+  --radio-bd-color-active: var(--gold);
+
+  --radio-size-inner-ring: 13px;
+}
+
+//Core styles
+.radiobtn {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-weight: 300;
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"] + span {
+    background-color: var(--radio-bg-color-inactive);
+    border: 1px solid var(--radio-bd-color-inactive);
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    appearance: none;
+    width: var(--radio-size);
+    height: var(--radio-size);
+    min-width: var(--radio-size);
+    min-height: var(--radio-size);
+    transition: border 0.2s ease-in-out;
+  }
+
+  input[type="radio"]:checked + span {
+    border: 1px solid var(--radio-bd-color-active);
+  }
+
+  input[type="radio"]:checked + span:after {
+    background: var(--gold);
+    border-radius: 50%;
+    content: " ";
+    height: var(--radio-size-inner-ring);
+    width: var(--radio-size-inner-ring);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
+//End core styles
+
+//Mods
+.radiobtn:hover {
+  input[type="radio"] + span {
+    border: 1px solid var(--radio-bd-color-active);
+  }
+}
+//End mods
+
+//Media queries
+
+//End media queries

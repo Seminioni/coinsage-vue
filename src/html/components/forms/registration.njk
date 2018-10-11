@@ -1,0 +1,46 @@
+{% macro registration() %}
+<div class="form form--registration">
+  <form>
+    <div class="form__field">
+      <label class="label" for="bio">
+        <p class="form__field-heading">Представьтесь, пожалуйста</p>
+        <input type="text" id="bio" placeholder="ФИО">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="email">
+        <div class="form__field-heading">Электронная почта
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <span class="memo__text">На почту придет письмо с паролем для доступа к личному кабинету</span>
+          </div>
+        </div>
+        <input type="email" id="email" placeholder="email">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="phone">
+        <div class="form__field-heading">Телефон
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <i class="memo__star">*</i>
+            <span class="memo__text">Для связи по заказам и восстановлению данных</span>
+          </div>
+        </div>
+        <input type="text" id="phone" placeholder="+7">
+      </label>
+    </div>
+    <div class="form__field form__field--button form__field--centered">
+      <input type="submit" class="btn-black" value="Зарегистрироваться">
+    </div>
+    <div class="form__field">
+      <div class="memo memo--alone">
+        <span class="memo__text">*На почту придет письмо с паролем для доступа к личному кабинету</span>
+      </div>
+      <div class="memo memo--alone">
+        <span class="memo__text">**Для связи по заказам и восстановлению данных</span>
+      </div>
+    </div>
+  </form>
+</div>
+{% endmacro %}

@@ -1,0 +1,164 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--personal-cabinet-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Личный кабинет</h1>
+
+       <div class="header__description">
+         <p class="header__description-field">Константинов Константин</p>
+         <p class="header__description-field">constantin@gmail.com</p>
+
+         <a href="#" class="link-standart link-exit">выйти</a>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="section-wrapper section-wrapper--pdt-no-on-desktop">
+      <div data-controller="tabs" class="tabs">
+
+          <div class="container">
+            <p data-target="tabs.heading" data-action="click->tabs#onMobileTabHeadingClick" class="tabs__mobile-heading">Мои заказы</p>
+            <ul data-target="tabs.inner" data-tabs class="tabs__inner">
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#purchaces" class="link tabs__link tabs__link--active">Мои заказы</a></li>
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#favorite" class="link tabs__link">Избранное</a></li>
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#basket" class="link tabs__link">Корзина</a></li>
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#preferences" class="link tabs__link">Настройки</a></li>
+            </ul>
+
+          </div>
+
+      </div>
+
+      <div data-tabs-content>
+
+        <div data-tabs-pane id="purchaces" class="tabs-pane tabs-pane--active">
+
+          <section class="section-wrapper basket section-wrapper--pdb">
+
+            <h2 class="section-title">Мои заказы</h2>
+              <div class="container">
+
+                {% include 'components/_basket-item.njk' %}
+                {% include 'components/_basket-item.njk' %}
+                {% include 'components/_basket-item.njk' %}
+
+                <p class="basket__totals">
+                  Итого:
+                  <span>559 496 ₽</span>
+                </p>
+
+              </div>
+
+          </section>
+
+
+        </div>
+
+        <div data-tabs-pane id="favorite" class="favorite catalog-carousel tabs-pane">
+           <section class="section-wrapper section-wrapper--pdb">
+
+              <h2 class="section-title">Избранное</h2>
+              <div class="container container--padding-off">
+                <div data-controller="catalog-carousel" class="catalog is-initing">
+                  <div class="catalog__inner">
+
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+                    {% include 'components/_catalogItem.njk' %}
+
+                  </div>
+
+                </div>
+              </div>
+
+           </section>
+        </div>
+
+        <div data-tabs-pane id="basket" class="tabs-pane">
+
+          <section class="basket section-wrapper section-wrapper--pdb">
+            <h2 class="section-title">Корзина</h2>
+
+            <div class="container">
+
+              {% include 'components/_basket-item.njk' %}
+              {% include 'components/_basket-item.njk' %}
+              {% include 'components/_basket-item.njk' %}
+
+              <p class="basket__totals">
+                Итого:
+                <span>559 496 ₽</span>
+              </p>
+
+            </div>
+
+          </section>
+
+          <section class="purchase-reg-form form-wrapper section-wrapper  section-wrapper--gray-bg section-wrapper--pdt">
+            <h2 class="section-title">Оформление покупки</h2>
+
+            <div class="container">
+              {% import 'components/forms/purchaseRegistration.njk' as forms %}
+
+              {{ forms.purchaseRegistrationInstance2() }}
+            </div>
+          </section>
+
+        </div>
+
+        <div data-tabs-pane id="preferences" class="preferences tabs-pane">
+
+           <section class="purchase-form form-wrapper section-wrapper section-wrapper--pdb">
+            <h2 class="section-title">Настройки</h2>
+
+            <div class="container">
+              {% import 'components/forms/preferences.njk' as forms %}
+
+              {{ forms.preferences() }}
+            </div>
+          </section>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

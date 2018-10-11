@@ -1,0 +1,64 @@
+{% extends 'layouts/application.njk' %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--contacts-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Контакты</h1>
+
+      <div class="header__description">
+        <p>Круглосуточная связь<br>по телефону:</p>
+        <p><a href="tel:+79115647683" class="link-standart link-standart--inside-text">+7 911 564 76 83</a></p>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+
+  <main class="main">
+
+
+    <section class="contacts section-wrapper section-wrapper--pdt section-wrapper--pdb">
+
+      <div class="container">
+
+          <div class="contacts__section">
+            <p>Telegram: <a href="https://t.me/MONETNIK_bot" class="link-standart link-standart--inside-text">https://t.me/MONETNIK_bot</a></p>
+            <p>Facebook messenger: <a href="https://m.me/monetnikru" class="link-standart link-standart--inside-text">https://m.me/monetnikru</a></p>
+            <p>E-mail для связи: <a href="email:mail@monetnik.ru" class="link-standart link-standart--inside-text">mail@monetnik.ru</a></p>
+          </div>
+          <div class="contacts__section">
+            <p>Режим выдачи заказов: ежедневно с 09:00 до 20:00 МСК</p>
+            <p>Адрес офиса: 127055, Москва, м. Менделеевская, ул. Новослободская, д. 20, этаж 4, офис 409.</p>
+          </div>
+
+
+      </div>
+    </section>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

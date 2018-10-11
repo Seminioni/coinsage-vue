@@ -1,0 +1,63 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--black-content page__wrapper--news-page">
+
+  <header data-controller="header" class="header header--with-bg">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Новости</h1>
+
+       <div class="header__description">
+
+          <nav class="news-nav">
+            <a href="#" class="link-standart news-nav__item">2017</a>
+            <a href="#" class="link-standart news-nav__item">2018</a>
+            <a href="#" class="link-standart news-nav__item">2019</a>
+          </nav>
+
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="news-section section-wrapper section-wrapper--pdb section-wrapper--pdt">
+      <h2 class="section-title">2017</h2>
+
+      <div class="container container--padding-off">
+        <div class="news-list">
+          {% include 'components/_news.njk' %}
+
+
+        </div>
+        {% include 'components/_pagination.njk' %}
+      </div>
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

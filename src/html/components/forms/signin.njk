@@ -1,0 +1,24 @@
+{% macro signin() %}
+<div class="form form--signin">
+  <form>
+    <div class="form__field">
+      <label class="label" for="email">
+        <p class="form__field-heading">Email</p>
+        <input type="email" id="email" placeholder="email">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="pass">
+        <div class="form__field-heading">Пароль
+         </div>
+        <input type="password" id="pass" placeholder="email">
+      </label>
+    </div>
+
+    <div class="form__field form__field--button form__field--centered">
+      <input type="submit" class="btn-black" value="войти">
+    </div>
+
+  </form>
+</div>
+{% endmacro %}

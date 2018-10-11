@@ -1,0 +1,41 @@
+.page__wrapper.page__wrapper--payment-page {
+  //Core styles
+
+  .main {
+    .payments-conditions {
+      margin-top: 50px;
+    }
+
+    .payments-system {
+      margin-top: 50px;
+    }
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/payment-bg--mobile.jpg',
+      '../images/general/payment-bg--desktop.jpg'
+    )
+  }
+
+  //End Mods
+
+  //Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+  //End media queries
+}

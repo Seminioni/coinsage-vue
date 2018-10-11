@@ -1,0 +1,63 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--black-content page__wrapper--payment-page page__wrapper--content-page">
+
+  <header data-controller="header" class="header header--with-bg">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Оплата</h1>
+
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="payment-variations section-wrapper section-wrapper--pdt section-wrapper--pdb">
+
+      <h2 class="section-title">Cпособы оплаты</h2>
+      <div class="container">
+        <ol>
+          <li>1. Наличными в магазине при оформлении самовывоза</li>
+          <li>2. Банковские карты:</li>
+        </ol>
+
+        <p>Сервис приёма оплаты предоставлен Yandex.Деньги</p>
+
+        <p>Yandex.Деньги не передает данные Вашей карты магазину и иным третьим лицам. Безопасность платежей с помощью банковских карт обеспечивается технологиями защищенного соединения HTTPS и двухфакторной аутентификации пользователя 3D Secure. В соответствии с ФЗ «О защите прав потребителей» в случае, если Вам оказана услуга или реализован товар ненадлежащего качества, платеж может быть возвращен на банковскую карту, с которой производилась оплата. Порядок возврата средств уточняйте у администрации интернет-магазина.</p>
+
+        <p class="payments-conditions">Условия продажи товаров через сайт coinsage.ru описаны <a class="link" href="#"><strong>здесь.</strong></a></p>
+
+        <ul class="payments-system">
+          <li><img src="../images/content/icon-payments.svg" alt=""></li>
+        </ul>
+      </div>
+
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

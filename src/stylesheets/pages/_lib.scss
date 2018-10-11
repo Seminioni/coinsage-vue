@@ -1,0 +1,40 @@
+.page__wrapper.page__wrapper--lib-page {
+//Core styles
+  padding-top: 0;
+  .header {
+    padding-top: 0;
+  }
+  .header__top {
+    position: static;
+  }
+
+  .header__container {
+    padding-top: 45px;
+  }
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/main-bg--mobile.jpg',
+      '../images/general/main-bg--desktop.jpg'
+    )
+  }
+//Mods
+}
+
+
+
+//End mods
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

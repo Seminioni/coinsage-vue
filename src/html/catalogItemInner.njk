@@ -1,0 +1,145 @@
+ {% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--catalog-item-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section data-controller="catalog-item" class="catalog-item-wrapper section-wrapper section-wrapper--pdt">
+      <div class="catalog-item">
+        <div class="container">
+          <a href="catalog.html" class="link back-home arrow-left">в каталог</a>
+          <h1 class="catalog-item__heading">CША 1 доллар 1921 D</h1>
+          <p class="catalog-item__price">59 496 ₽</p>
+
+          <div class="catalog-item__info">
+            <div class="catalog-item__preview">
+            </div>
+            <div class="catalog-item__info-top catalog-item__slider-container">
+              <a href="#" data-action="catalog-item#openModal" class="link-as-icon sprite icon-expand">
+                <img src="../images/content/icon-expand.svg"  alt="">
+              </a>
+              <div class="catalog-item__slider-container">
+                <div data-target="catalog-item.slider" class="catalog-item__slider catalog-item__img  is-initing">
+                  <img class="catalog-item__img-item" src="../images/content/content-7.png" data-zoom="../images/content/content-8.png" alt="">
+                  <img class="catalog-item__img-item" src="../images/content/content-5.jpg" data-zoom="../images/content/content-7.png" alt="">
+                  <img class="catalog-item__img-item" src="../images/content/content-6.png" data-zoom="../images/content/content-8.png" alt="">
+              </div>
+            </div>
+
+            </div>
+            <div class="catalog-item__info-bottom">
+              <div class="catalog-info__desc">
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Состояние:</p>
+                  <p class="catalog-info__value">VF</p>
+                </div>
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Год выпуска:</p>
+                  <p class="catalog-info__value">1890</p>
+                </div>
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Материал:</p>
+                  <p class="catalog-info__value">медь</p>
+                </div>
+              </div>
+              <div class="catalog-item__buttons">
+                <button class="catalog-item__button btn-black">в избранное</button>
+                <button class="catalog-item__button btn-gold">в корзину</button>
+              </div>
+              <div class="catalog-info__desc-vertical">
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Продаем:</p>
+                  <p class="catalog-info__value">59 496 ₽</p>
+                </div>
+                <div class="catalog-info__desc-item">
+                  <p class="catalog-info__prop">Покупаем:</p>
+                  <p class="catalog-info__value">60 000 ₽</p>
+                </div>
+                <div class="catalog-info__desc-item catalog-info__desc-item--stepper">
+                  <p class="catalog-info__prop">Кол-во:</p>
+                  <div class="catalog-info__value">
+                    {% include 'components/_stepper.njk' %}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="in-row in-row--three section-wrapper section-wrapper--gray-bg section-wrapper--pdt">
+
+      <div class="container">
+        <div class="in-row__inner">
+          <div class="in-row__item">
+            <img src="../images/content/icon-bookmark.svg" alt="" class="in-row__img">
+            <p class="in-row__text">Доставляем в крупные города РФ за 3-5 дней. Система отслеживания посылок.</p>
+          </div>
+          <div class="in-row__item">
+            <img src="../images/content/icon-lock.svg" alt="" class="in-row__img">
+            <p class="in-row__text">Мы гарантируем, что вы получите свой заказ быстро
+и точно в срок!</p>
+          </div>
+          <div class="in-row__item">
+            <img src="../images/content/icon-colored-loop.svg" alt="" class="in-row__img">
+            <p class="in-row__text">100% подлинные монеты и банкноты, являющиеся или бывшие платежными средствами стран мира</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="similar-coins catalog-carousel section-wrapper section-wrapper--pdt section-wrapper--pdb">
+      <h2 class="section-title">Похожие монеты</h2>
+
+      <div class="container container--padding-off">
+        <div data-controller="catalog-carousel" class="catalog is-initing">
+          <div  class="catalog__inner">
+
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+     {% include 'components/_modal.njk' %}
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

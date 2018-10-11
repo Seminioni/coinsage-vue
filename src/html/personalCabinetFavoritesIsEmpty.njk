@@ -1,0 +1,80 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--personal-cabinet-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Личный кабинет</h1>
+
+       <div class="header__description">
+         <p class="header__description-field">Константинов Константин</p>
+         <p class="header__description-field">constantin@gmail.com</p>
+
+         <a href="#" class="link-standart link-exit">выйти</a>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="section-wrapper section-wrapper--pdt-no-on-desktop">
+      <div class="tabs">
+
+          <div class="container">
+            <p class="tabs__mobile-heading">Мои заказы</p>
+            <ul class="tabs__inner">
+              <li class="tabs__item"><a href="personalCabinetMyOrders.html" class="link tabs__link">Мои заказы</a></li>
+              <li class="tabs__item"><a href="personalCabinetFavorites.html" class="link tabs__link tabs__link--active">Избранное</a></li>
+              <li class="tabs__item"><a href="personalCabinetBasket.html" class="link tabs__link">Корзина</a></li>
+              <li class="tabs__item"><a href="personalCabinetPreferences.html" class="link tabs__link">Настройки</a></li>
+            </ul>
+
+          </div>
+
+      </div>
+
+      <section id="favorite" class="favorite favorite--empty-list catalog-carousel section-wrapper section-wrapper--pdb">
+        <h2 class="section-title">Избранное</h2>
+
+        <div class="container">
+          <div class="favorite__empty-container">
+
+            <img class="favorite__empty-icon" src="../images/content/icon-box.svg" alt="">
+
+            <h3 class="favorite__subHeading">У вас пока нет сохраненных товаров</h3>
+
+            <a href="#" class="link arrow-left">в каталог</a>
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

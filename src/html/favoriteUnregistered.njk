@@ -1,0 +1,76 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--favorite-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Избранное</h1>
+
+      <p class="header__description">
+        <a href="" class="link-standart link-standart--inside-text">Зарегистрируйтесь</a>, чтобы сохранить товары в личном кабинете
+      </p>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="favorite catalog-carousel section-wrapper section-wrapper--pdt section-wrapper--pdb">
+
+      <div class="container container--padding-off">
+        <div data-controller="catalog-carousel" class="catalog is-initing">
+          <div class="catalog__inner">
+
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+            {% include 'components/_catalogItem.njk' %}
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="register-form form-wrapper section-wrapper section-wrapper--gray-bg section-wrapper--pdt section-wrapper--pdb">
+      <h2 class="section-title">Зарегистрироваться</h2>
+
+      <div class="container">
+        {% import 'components/forms/registration.njk' as forms %}
+
+        {{ forms.registration() }}
+      </div>
+    </section>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

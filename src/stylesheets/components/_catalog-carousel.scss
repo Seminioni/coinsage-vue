@@ -1,0 +1,63 @@
+//Core styles
+.catalog-carousel {
+  .arrow {
+    display: none;
+  }
+
+  .catalog {
+    @include fixSlider();
+  }
+
+  @media (--m) {
+    .arrow {
+      display: block;
+    }
+    .catalog {
+      position: relative;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
+    .catalog__inner {
+      display: block;
+    }
+
+    .catalog-item-wr {
+      width: 100%;
+    }
+  }
+
+  @media (--xl) {
+    .catalog-item {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .catalog-item-wr {
+    &:hover {
+      .catalog-on-hover-item {
+        display: none;
+      }
+    }
+    .icon-favorite,
+    .icon-basket {
+      display: none;
+    }
+  }
+}
+//End core styles
+
+//Mods
+
+//End mods
+
+//Media queries
+//Core styles
+
+//End core styles
+
+//Mods
+
+//End mods
+//End media queries

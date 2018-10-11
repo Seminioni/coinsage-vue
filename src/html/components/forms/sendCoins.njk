@@ -1,0 +1,59 @@
+{% macro sendCoins() %}
+<div class="form form--send-coins">
+  <form>
+    <div class="form__field">
+      <label class="label" for="bio">
+        <p class="form__field-heading">Представьтесь, пожалуйста</p>
+        <input type="text" id="bio" placeholder="ФИО">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="email">
+        <div class="form__field-heading">Электронная почта
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <span class="memo__text">На почту придет письмо с паролем для доступа к личному кабинету</span>
+          </div>
+        </div>
+        <input type="email" id="email" placeholder="email">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <label class="label" for="phone">
+        <div class="form__field-heading">Телефон
+          <div class="memo">
+            <i class="memo__star">*</i>
+            <i class="memo__star">*</i>
+            <span class="memo__text">Для связи по заказам и восстановлению данных</span>
+          </div>
+        </div>
+        <input type="tel" id="phone" placeholder="+7">
+      </label>
+    </div>
+    <div class="form__field form__field--one-half-width">
+      <div data-controller="file-uploader" class="file-uploader">
+        <label class="label" for="fileUploader">
+          <input data-target="file-uploader.fileInput" type="file" id="fileUploader" accept="image/*" multiple="true">
+          <div class="file-uploader__inner">
+            <span class="file-uploader__icon"></span>
+          </div>
+        </label>
+        <div data-target="file-uploader.uploads-list" class="file-uploader__uploads-list">
+
+        </div>
+      </div>
+    </div>
+    <div class="form__field form__field--button form__field--centered">
+      <input type="submit" class="btn-black" value="отправить">
+    </div>
+    <div class="form__field">
+      <div class="memo memo--alone">
+        <span class="memo__text">*На почту придет письмо с паролем для доступа к личному кабинету</span>
+      </div>
+      <div class="memo memo--alone">
+        <span class="memo__text">**Для связи по заказам и восстановлению данных</span>
+      </div>
+    </div>
+  </form>
+</div>
+{% endmacro %}

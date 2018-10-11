@@ -1,0 +1,110 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--aboutus-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">О нас</h1>
+
+      <div class="header__description">
+        <p>Скупка и продажа золотых, серебряных монет от профессионалов</p>
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="abilities section-wrapper section-wrapper--pdb section-wrapper--pdt">
+      <h2 class="section-title">Что мы делаем</h2>
+
+      <div class="container">
+        <div class="abilities__list">
+          <div class="abilities__item">
+            <h4 class="abilities__heading">Реализация, скупка золота</h4>
+            <p class="abilities__text">Если вы посетили антикварную скупку «Золотой город», значит старинные вещи и произведения искусства вам неравнодушны. </p>
+          </div>
+          <div class="abilities__item">
+            <h4 class="abilities__heading">Продажа, скупка серебра</h4>
+            <p class="abilities__text">Если вы посетили антикварную скупку «Золотой город», значит вещи и произведения искусства вам неравнодушны. Наш салон – это уникальное место, где собраны отклики различных времен и народов.</p>
+          </div>
+          <div class="abilities__item">
+            <h4 class="abilities__heading">Ценообразование при приеме</h4>
+            <p class="abilities__text">Если вы посетили антикварную скупку «Золотой город», значит старинные вещи и произведения искусства вам неравнодушны. Наш салон – это уникальное место, где собраны отклики различных времен и народов.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="fluid-component fluid-component--rtl section-wrapper section-wrapper--gray-bg section-wrapper--pdb section-wrapper--pdt">
+      <div class="container">
+        <div class="fluid-component__inner">
+          <div class="fluid-component__images-wr">
+            <div class="fluid-component__image-wr"><img src="../images/content/content-7.png" alt="" class="fluid-component__image"></div>
+          </div>
+
+          <div class="fluid-component__content">
+            <p>Если вы посетили антикварную скупку «Золотой город», значит старинные вещи и произведения искусства вам неравнодушны. Наш салон – это уникальное место, где собраны отклики различных времен и народов, здесь
+можно увидеть настоящие шедевры различной тематики.</p>
+            <p>Скупка в Санкт Петербурге осуществляется во многих местах, но мало где ценят вещи так, как у нас. Работа высококвалифицированных профессионалов позволяет определить адекватную стоимость той или иной монеты, отличить подделку от оригинала и внести свой вклад
+в историю человечества.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="advantages section-wrapper section-wrapper--pdb section-wrapper--pdt">
+      <h2 class="section-title">Наши преимущества</h2>
+      <div class="container">
+          <p class="advantages__desc">Компания дает клиентам возможность быстро и максимально выигрышно продать золотые монеты в любом состоянии. Опытные оценщики оперативно оценят монету, предложат высокую цену с учетом биржевого курса, предоставят расчет.</p>
+          <section class="advantages__list">
+            <div class="advantages__list-item">
+              <img src="../images/content/icon-money.svg"  class="advantages__img">
+              <h4 class="advantages__heading">Наличными в пункте приема</h4>
+            </div>
+            <div class="advantages__list-item">
+              <img src="../images/content/icon-credit-cards.svg"  class="advantages__img">
+              <h4 class="advantages__heading">На банковскую карту</h4>
+            </div>
+          </section>
+      </div>
+    </section>
+
+    <section class="subscribtion-form form-wrapper section-wrapper section-wrapper--pdt">
+
+      <div class="container">
+        {% import 'components/forms/subscribe.njk' as forms %}
+
+        {{ forms.subscribe() }}
+      </div>
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

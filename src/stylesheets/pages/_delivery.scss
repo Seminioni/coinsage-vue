@@ -1,0 +1,30 @@
+.page__wrapper.page__wrapper--delivery-page {
+  //Core styles
+
+  .main {
+  }
+
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/delivery-bg--mobile.jpg',
+      '../images/general/delivery-bg--desktop.jpg'
+    )
+  }
+
+  //End Mods
+
+  //Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+  //End media queries
+}

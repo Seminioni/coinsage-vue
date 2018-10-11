@@ -1,0 +1,54 @@
+.page__wrapper.page__wrapper--catalog-page {
+  //Core styles
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+  .pagination {
+    margin-top: 15px;
+    @media (--m) {
+      margin-top: 45px;
+    }
+  }
+
+
+  .header__container {
+    .header__container {
+      @media (--m) {
+        max-width: unset;
+      }
+    }
+  }
+  .catalog {
+    padding-bottom: 40px;
+    @media (--m) {
+      padding-bottom: 70px;
+    }
+  }
+  //End core styles
+
+  //Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/catalog-bg--mobile.jpg',
+      '../images/general/catalog-bg--desktop.jpg'
+    )
+  }
+  //Mods
+
+
+
+  //End mods
+
+  //Media queries
+
+    //Core styles
+
+    //End core styles
+
+    //Mods
+
+    //End mods
+  //End media queries
+}

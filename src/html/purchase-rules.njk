@@ -1,0 +1,62 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--black-content page__wrapper--purchase-rules-page page__wrapper--content-page">
+
+  <header data-controller="header" class="header header--with-bg">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Правила скупки</h1>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="purchase-rules section-wrapper section-wrapper--pdt section-wrapper--pdb">
+
+      <h2 class="section-title">Как продать монеты</h2>
+      <div class="container">
+
+       <p>
+         Компания «Базовый Элемент» покупает золото как у физических, так и у юридических лиц.
+
+       </p>
+
+        <p>Продажа золота не занимает много времени - наши специалисты оценят Ваше золото и предоставят за него расчет. Скупка золота осуществляется при предъявлении паспорта.</p>
+
+        <p>Сотрудничать с компанией «Базовый Элемент» - значит быть уверенным в своей безопасности и выгоде.</p>
+
+        <img class="purchase-return__logo" src="../images/content/icon-big-search-loop.svg" alt="">
+
+        <a href="purchase.html#send-coins-form" class="link purchase-return__link">Отправить монеты на предварительную оценку</a>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

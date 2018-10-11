@@ -1,0 +1,126 @@
+// Mixins
+
+@mixin rhythm($sizeValue, $heightValue) {
+  font-size: $sizeValue + px;;
+  line-height: $heightValue / $sizeValue;
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+@mixin reset-button {
+  overflow : visible;
+  margin : 0;
+  padding : 0;
+  border : 0;
+  background : transparent;
+  font : inherit;
+  line-height : normal;
+  cursor : pointer;
+  -moz-user-select : text;
+
+  &::-moz-focus-inner {
+      padding : 0;
+      border : 0;
+  }
+}
+
+@mixin setTransitionFor($properties...) {
+  transition: 0.2s ease-in-out;
+  transition-property: $properties;
+}
+
+@mixin setTransitionFor2($time: 0.2s, $properties...) {
+  transition-timing-function: ease-in-out;
+  transition-duration: $time;
+  transition-property: $properties;
+}
+
+@mixin arrowSmall($side) {
+  position: relative;
+  display: inline-block;
+  @if $side == right {
+    &:after,
+    &:before {
+      vertical-align: text-bottom;
+    }
+    &:after {
+      content: '>';
+      margin-left: 10px;
+    }
+  } @else {
+    &:before {
+      content: '<';
+      margin-right: 10px;
+    }
+  }
+}
+
+@mixin goldOnHover($icon) {
+  @include setTransitionFor(color, fill);
+
+  &:hover {
+    @if $icon == icon {
+      fill: var(--gold);
+    } @else {
+      color: var(--gold);
+    }
+  }
+  &:active {
+    @if $icon == icon {
+      fill: var(--gold);
+    } @else {
+      color: var(--gold);
+    }
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin setHeaderBackgrounds($mobilePath, $desktopPath) {
+  @custom-media --headerBreakpoint (width >= 400px);
+
+  background-image: url($mobilePath);
+  @media (--headerBreakpoint) {
+    background-image: url($desktopPath);
+  }
+}
+
+@mixin fixSlider() {
+  @include setTransitionFor2(0.6s, opacity, visibility, overflow);
+
+  &.is-initing {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    > * {
+      height: 0;
+    }
+  }
+}

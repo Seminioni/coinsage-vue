@@ -1,0 +1,63 @@
+.page__wrapper.page__wrapper--contacts-page {
+//Core styles
+  .contacts {
+    padding-bottom: 30px;
+    @media (--m) {
+      padding-bottom: 60px;
+    }
+  }
+
+  .header {
+    .link-standart {
+      margin-top: 15px;
+      display: inline-block;
+    }
+  }
+
+  .contacts__section {
+    .link-standart {
+      color: var(--black);
+    }
+    & + .contacts__section {
+      margin-top: 50px;
+    }
+
+    p {
+      @include rhythm(13,13);
+      color: var(--black);
+      & + p {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .footer {
+    background-color: var(--gray1);
+  }
+
+//End core styles
+
+//Mods
+  .header--with-bg {
+    @include setHeaderBackgrounds(
+      '../images/general/contacts-bg--mobile.jpg',
+      '../images/general/contacts-bg--desktop.jpg'
+    )
+  }
+
+
+//End Mods
+
+
+//Media queries
+
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+
+//End media queries
+}

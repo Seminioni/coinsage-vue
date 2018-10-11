@@ -1,0 +1,71 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--favorite-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Избранное</h1>
+
+      <p class="header__description">
+        <a href="" class="link-standart link-standart--inside-text">Зарегистрируйтесь</a>, чтобы сохранить товары в личном кабинете
+      </p>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="favorite favorite--empty-list section-wrapper section-wrapper--pdt section-wrapper--pdb">
+
+      <div class="container">
+        <div class="favorite__empty-container">
+
+          <img class="favorite__empty-icon" src="../images/content/icon-box.svg" alt="">
+
+          <h3 class="favorite__subHeading">У вас пока нет сохраненных товаров</h3>
+
+          <a href="#" class="link arrow-left">в каталог</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="register-form register-form--success section-wrapper section-wrapper--gray-bg section-wrapper--pdt section-wrapper--pdb">
+
+      <div class="container">
+
+        <div class="register-form__success-container">
+          <h3>Спасибо за регистрацию!</h3>
+          <p>На вашу почту направлено письмо с подтверждением.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'layouts/application.njk' %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--catalog-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Каталог</h1>
+
+      <div class="header__description">
+
+
+        <form data-controller="filters" class="filters">
+          <a href="#" data-action="filters#onOpenButtonClick" class="link-standart filters__button">фильтры</a>
+          <a href="#" data-action="filters#onOpenButtonClick" class="icon-cross"></a>
+          <div data-target="filters.inner" class="filters__inner">
+            <div class="select filter select--white">
+              <select id="select-money">
+                <option value="gold">Монета</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-country">
+                <option value="gold">Россия</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-year">
+                <option value="gold">1976</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-price">
+                <option value="gold">Золото</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+            <div class="select filter select--white">
+              <select id="select-material">
+                <option value="gold">Золото</option>
+                <option value="argentum">Серебро</option>
+                <option value="platina">Платина</option>
+                <option value="metal">Металл</option>
+              </select>
+            </div>
+
+          </div>
+           <a href="#" data-action="filters#onResetButtonClick" class="link-standart reset-button">Сбросить</a>
+        </form>
+
+
+      </div>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+
+
+  <main class="main">
+
+
+    <section class="catalog section-wrapper section-wrapper--pdt">
+      <div class="container container--padding-off">
+        <div class="catalog__inner">
+
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+          {% include 'components/_catalogItem.njk' %}
+
+        </div>
+        {% include 'components/_pagination.njk' %}
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

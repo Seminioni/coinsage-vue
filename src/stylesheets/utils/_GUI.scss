@@ -1,0 +1,269 @@
+// GUI styles
+
+.h1 {
+  @extend .f-weight-light;
+  @include rhythm(36, 36);
+}
+
+.h2 {
+  @extend .f-weight-light;
+  @include rhythm(30, 36);
+}
+
+.h3 {
+  @extend .f-weight-light;
+  @include rhythm(24, 27);
+}
+
+.h4 {
+  @extend .f-weight-light;
+  @include rhythm(18, 18);
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.c-gold {
+  color: var(--gold);
+}
+
+.f-weight-light {
+  font-weight: 300;
+}
+
+.f-weight-normal {
+  font-weight: 400;
+}
+
+.f-style-italic {
+  font-style: italic;
+}
+
+
+.arrow-right {
+  @extend .f-weight-light;
+  @include arrowSmall(right);
+}
+
+.arrow-left {
+  @extend .f-weight-light;
+  @include arrowSmall(left);
+}
+
+.up-to-menu {
+  font-size: 11px;
+  color: color(var(--black) l(80%));
+  &:hover {
+    color: color(var(--black) l(0%));
+  }
+}
+
+.sprite {
+  display: inline-block;
+}
+
+.icon {
+  &-favorite {
+    width: 19px;
+  }
+
+  &-basket {
+    width: 16px;
+  }
+
+  &-diamond {
+    width: 15px;
+  }
+  &-loop {
+    //@include retina-sprite($icon-loop-group);
+    background-color: transparent;
+    border: 0;
+    margin-left: 5px;
+  }
+}
+
+.icon-cross {
+  display: none;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 15px;
+    left: 50%;
+    top: 50%;
+    background-color: var(--black);
+    @media (--xl) {
+      background-color: color(var(--black) l(50%));
+      @include setTransitionFor(background);
+    }
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:hover {
+    &:after,
+    &:before {
+      background-color: var(--black);
+    }
+  }
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  &:hover {
+    cursor: pointer;
+  }
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 15px;
+    background-color: color(var(--black) l(80%));
+    @include setTransitionFor(background);
+  }
+  &--prev {
+    left: -32px;
+    &:after,
+    &:before {
+      left: 0;
+      transform: translateY(-50%, -50%);
+    }
+    &:after {
+      transform-origin: 0 100%;
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform-origin: 0 100%;
+      transform: rotate(-45deg);
+    }
+  }
+  &--next {
+    right: -32px;
+    &:after,
+    &:before {
+      right: 0;
+      transform: translateY(-50%, -50%);
+    }
+    &:after {
+      transform-origin: 100% 0%;
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform-origin: 100% 0%;
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    &:after,
+    &:before {
+      background-color: color(var(--black) l(0));
+    }
+  }
+}
+
+
+.fluid-component__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @media (--m) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.fluid-component--ltr {
+  @media (--m) {
+
+    .fluid-component__images-wr {
+      margin-right: 6vw;
+    }
+  }
+}
+
+
+.fluid-component--rtl {
+  @media (--m) {
+
+    .fluid-component__images-wr {
+      order: 2;
+      margin-left: 6vw;
+    }
+    .fluid-component__content {
+      order: 1;
+    }
+  }
+}
+
+
+.fluid-component__images-wr {
+  margin-bottom: 50px;
+  flex-shrink: 0;
+  display: inline-flex;
+  @media (--m) {
+    margin-bottom: 0;
+
+  }
+}
+
+.fluid-component__image-wr {
+  img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    object-fit: contain;
+    @media (--m) {
+      img {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+  & + .fluid-component__image-wr {
+    margin-left: 20px;
+  }
+
+}
+
+.fluid-component__content {
+  @extend .f-weight-light;
+  @include rhythm(14,17);
+  p + p {
+    margin-top: 15px;
+  }
+  @media (--m) {
+    max-width: 555px;
+  }
+}
+
+.payments-system {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  li {
+    flex-shrink: 0;
+    & + li {
+      margin-left: 30px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{% from 'macros/helpers.html' import sprite %}
+
+<header data-controller="header" class="header header--with-bg">
+
+    <div class="header__top">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container">
+      <a href="main.html" class="standalone-logo">
+        {{ sprite('icon-logo') }}
+      </a>
+
+      <p class="header__title">Нумизматический<br>интернет-магазин</p>
+
+      <div data-controller="lang-switcher" class="lang-switcher lang-switcher--vertical lang-switcher--big lang-switcher--white">
+        <h3 class="lang-switcher__heading">Выберите язык</h3>
+        <label class="lang-switcher__list-item">
+          <input type="radio" name="2" class="lang-switcher__radio" checked="true">
+          <span>Ru</span>
+        </label>
+        <label class="lang-switcher__list-item">
+          <input type="radio" name="2" class="lang-switcher__radio">
+          <span>Eng</span>
+        </label>
+      </div>
+    </div>
+
+      {% include 'components/header/_mobile-menu.njk' %}
+
+</header>
+

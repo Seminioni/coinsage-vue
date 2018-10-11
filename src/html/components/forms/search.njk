@@ -1,0 +1,12 @@
+{% macro search(id) %}
+<div class="form form--search">
+  <form>
+    <div class="form__field">
+      <label for="search">
+        <input type="search" id="{{id}}">
+        <input type="submit" class="icon icon-loop">
+      </label>
+    </div>
+  </form>
+</div>
+{% endmacro %}

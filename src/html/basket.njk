@@ -1,0 +1,69 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--basket-page">
+
+  <header data-controller="header" class="header header--with-bg header--with-filter">
+
+    <div class="header__top header__top--white">
+
+      {% include 'components/header/_header-top.njk' %}
+
+    </div>
+
+    <div class="header__container header__container--second-variant">
+
+      <h1 class="header__title">Корзина</h1>
+
+       <p class="header__description">
+        <a href="" class="link-standart link-standart--inside-text">Зарегистрируйтесь</a>, чтобы сохранить товары в личном кабинете
+      </p>
+
+    </div>
+
+    {% include 'components/header/_mobile-menu.njk' %}
+
+  </header>
+
+  <main class="main">
+
+    <section class="basket section-wrapper section-wrapper--pdb section-wrapper--pdt">
+      <h2 class="section-title">Корзина</h2>
+
+      <div class="container">
+
+        {% include 'components/_basket-item.njk' %}
+
+        <p class="basket__totals">
+          Итого:
+          <span>559 496 ₽</span>
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="purchase-reg-form section-wrapper section-wrapper--pdt section-wrapper--pdb section-wrapper--gray-bg">
+      <h2 class="section-title">Оформление покупки</h2>
+      <div class="container">
+        {% import 'components/forms/purchaseRegistration.njk' as forms %}
+
+        {{ forms.purchaseRegistration() }}
+      </div>
+
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}

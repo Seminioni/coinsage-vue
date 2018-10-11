@@ -1,0 +1,52 @@
+//Core styles
+.memo {
+  display: inline-block;
+  font-size: 0;
+  @media (--m) {
+    margin-left: 18px;
+  }
+
+  & + .memo {
+    padding-top: 5px;
+  }
+}
+
+.memo__star {
+  @include rhythm(18,18);
+  display: inline;
+  @media (--m) {
+    display: none;
+  }
+}
+
+.memo__text {
+  @include rhythm(12,12)
+  color: var(--gray4);
+  display: none;
+  @media (--m) {
+    display: inline;
+  }
+}
+//End core styles
+
+//Mods
+.memo--alone {
+  display: block;
+  @media (--m) {
+    display: none;
+  }
+  .memo__text {
+    display: block;
+  }
+}
+//End mods
+
+//Media queries
+  //Core styles
+
+  //End core styles
+
+  //Mods
+
+  //End mods
+//End media queries

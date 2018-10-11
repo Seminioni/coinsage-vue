@@ -1,0 +1,136 @@
+{% extends 'layouts/application.njk' %}
+{% from 'macros/helpers.html' import spriteForLink,sprite %}
+
+
+{% block content %}
+
+<div class="page__wrapper page__wrapper--main-page">
+
+  {% include 'components/_header--main-page.njk' %}
+
+  <main class="main">
+
+    <section  class="available-coins section-wrapper section-wrapper--pdt">
+      <h2 class="section-title">Монеты в наличии</h2>
+
+      <div data-controller="tabs" class="tabs tabs--upside-down">
+
+          <div class="container">
+            <p data-target="tabs.heading" data-action="click->tabs#onMobileTabHeadingClick" class="tabs__mobile-heading">Спецпредложение</p>
+            <ul data-target="tabs.inner" data-tabs class="tabs__inner">
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#taba" class="link tabs__link tabs__link--active">Спецпредложение</a></li>
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#tabb" class="link tabs__link">Новое</a></li>
+              <li class="tabs__item"><a data-action="tabs#onTabsLinkClick" data-tab href="#tabc" class="link tabs__link">Курс покупки/продажи</a></li>
+            </ul>
+
+          </div>
+
+      </div>
+
+      <div data-tabs-content>
+
+        <div data-tabs-pane id="taba" class="catalog-special-offers tabs-pane tabs-pane--active">
+          <div class="container container--padding-off">
+            <div class="catalog__inner">
+
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+
+            </div>
+          </div>
+        </div>
+
+        <div data-tabs-pane id="tabb" class="catalog-new tabs-pane">
+          <div class="container container--padding-off">
+            <div class="catalog__inner">
+
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+              {% include 'components/_catalogItem.njk' %}
+
+            </div>
+          </div>
+        </div>
+
+        <div data-tabs-pane id="tabc" class="sales-rate-wrapper tabs-pane">
+          <div class="container">
+            <div class="sales-rate">
+              <div class="sales-rate__subsection">
+                <h3 class="sales-rate__heading">Металлы</h3>
+                <div class="sales-rate__subsection-item">
+                  <span class="sales-rate__icon">AU</span>
+                  <p class="sales-rate__name">Золото</p>
+                  <p class="sales-rate__price">3256,67 ₽<br><span class="sales-rate__price-income sales-rate__price-income--up">+3256,67</span></p>
+                </div>
+                <div class="sales-rate__subsection-item">
+                  <span class="sales-rate__icon">AG</span>
+                  <p class="sales-rate__name">Серебро</p>
+                  <p class="sales-rate__price">3256,67 ₽<br><span class="sales-rate__price-income sales-rate__price-income--down">-16</span></p>
+                </div>
+              </div>
+
+              <div class="sales-rate__subsection">
+                <h3 class="sales-rate__heading">Валюта</h3>
+                <div class="sales-rate__subsection-item">
+                  <span class="sales-rate__icon">USD</span>
+                  <p class="sales-rate__name">Доллар</p>
+                  <p class="sales-rate__price">3256,67 ₽<br><span class="sales-rate__price-income sales-rate__price-income--up">+3256,67</span></p>
+                </div>
+                <div class="sales-rate__subsection-item">
+                  <span class="sales-rate__icon">EUR</span>
+                  <p class="sales-rate__name">Евро</p>
+                  <p class="sales-rate__price">3256,67 ₽<br><span class="sales-rate__price-income sales-rate__price-income--down">-16</span></p>
+                </div>
+              </div>
+
+            </div>
+              <p class="sales-rate__memo">Цены действительны на 20.11.2017</p>
+          </div>
+        </div>
+
+    </div>
+
+    </section>
+
+    <section class="news-section section-wrapper section-wrapper--pdt section-wrapper--pdb">
+      <h2 class="section-title">Новости</h2>
+      <div class="container container--padding-off">
+        <div class="news-list">
+          {% include 'components/_news.njk' %}
+
+        </div>
+        <a href="news.html" class="read-more link arrow-right">Читать больше новостей</a>
+      </div>
+    </section>
+
+    <section class="subscribtion-form form-wrapper section-wrapper section-wrapper--pdt">
+
+      <div class="container">
+        {% import 'components/forms/subscribe.njk' as forms %}
+
+        {{ forms.subscribe() }}
+      </div>
+    </section>
+
+  </main>
+
+  {% block footer %}
+
+   {% include 'components/_footer.njk' %}
+
+  {% endblock %}
+
+</div>
+
+{% endblock %}
