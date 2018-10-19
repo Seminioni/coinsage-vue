@@ -50,6 +50,9 @@
         href="#"
         class="icon-cross"
       ></a>
+      <button @click="addFavourite('addFavourite', 1)">
+        Добавить в избранное
+      </button>
     </div>
 
   </div>
@@ -57,6 +60,7 @@
 </template>
 
 <script>
+
   export default {
     name: 'CatalogItem',
 
@@ -78,6 +82,12 @@
 
       price_current() {
         return `${this.coin.price_current} ${this.coin.price_system}`;
+      },
+    },
+
+    methods: {
+      addFavourite(payload) {
+        this.$store.dispatch('addFavourite', payload);
       },
     },
   };
