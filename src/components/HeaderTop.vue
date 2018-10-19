@@ -78,6 +78,10 @@
         </label>
       </div>
 
+      <span>
+        {{ favourites }}
+      </span>
+
       <!-- {% import 'components/forms/search.njk' as forms %} -->
 
       <!-- {{ forms.search('search-2') }} -->
@@ -88,9 +92,17 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex';
+
   export default {
     data() {
       return {};
+    },
+
+    computed: {
+      ...mapState({
+        favourites: state => state.favourites.length,
+      }),
     },
   };
 </script>
