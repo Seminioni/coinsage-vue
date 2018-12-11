@@ -8,21 +8,18 @@
           class="header header--with-bg header--with-filter"
         >
 
-          <header-top></header-top>
+          <header-top/>
 
           <div class="header__container header__container--second-variant">
 
             <h1 class="header__title">Каталог</h1>
 
-            <div class="header__description">
-
-            </div>
+            <div class="header__description"/>
 
           </div>
 
         </header>
         <main class="main">
-
 
           <section class="catalog section-wrapper section-wrapper--pdt">
             <div class="container container--padding-off">
@@ -30,8 +27,8 @@
                 <template v-for="{id, characteristics} in coins">
                   <catalog-item
                     :key="id"
-                    :coin="characteristics"
-                  ></catalog-item>
+                    :characteristics="characteristics"
+                  />
                 </template>
 
               </div>
@@ -49,7 +46,7 @@
 
 <script>
   import Layout from '@/views/Layout.vue';
-  import CatalogItem from '@/components/CatalogItem.vue';
+  import CatalogItem from '@/components/CatalogItem/CatalogItem.vue';
   import HeaderTop from '@/components/HeaderTop.vue';
 
   import coins from '@/assets/coins';
