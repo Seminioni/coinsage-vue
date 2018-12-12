@@ -1,6 +1,7 @@
 {
   "name": "coinsage-vue",
   "private": false,
+  "author": "Mike Syomin <seminioni@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -30,9 +31,7 @@
     "postcss-font-magician": "^2.2.1",
     "postcss-normalize": "^7.0.1",
     "sass-loader": "^7.1.0",
-    "style-resources-loader": "^1.2.1",
     "vue-template-compiler": "^2.5.17"
   },
-  "author": "Mike Syomin <seminioni@gmail.com>",
   "license": "MIT"
 }

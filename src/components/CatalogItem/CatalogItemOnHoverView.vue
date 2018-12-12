@@ -7,7 +7,3 @@
     name: "CatalogItemOnHoverView"
   };
 </script>
-
-<style scoped>
-
-</style>

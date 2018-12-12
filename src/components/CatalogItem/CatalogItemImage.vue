@@ -7,7 +7,3 @@
     name: "CatalogItemImage"
   };
 </script>
-
-<style scoped>
-
-</style>

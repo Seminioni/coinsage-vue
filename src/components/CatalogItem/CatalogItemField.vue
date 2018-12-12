@@ -9,7 +9,3 @@
     name: 'CatalogItemField',
   };
 </script>
-
-<style scoped>
-
-</style>
