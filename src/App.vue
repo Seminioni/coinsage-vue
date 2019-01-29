@@ -7,5 +7,3 @@
     <router-view/>
   </div>
 </template>
-
-<style lang="scss" src="@/assets/stylesheets/app.scss"></style>

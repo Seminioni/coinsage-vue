@@ -3,7 +3,7 @@
     <template slot="content">
       <div class="page__wrapper page__wrapper--catalog-page">
 
-        <header
+        <!-- <header
           data-controller="header"
           class="header header--with-bg header--with-filter"
         >
@@ -18,16 +18,16 @@
 
           </div>
 
-        </header>
+        </header> -->
         <main class="main">
 
           <section class="catalog section-wrapper section-wrapper--pdt">
             <div class="container container--padding-off">
               <div class="catalog__inner">
-                <template v-for="{id, characteristics} in coins">
+                <template v-for="{id, data} in coins">
                   <catalog-item
                     :key="id"
-                    :characteristics="characteristics"
+                    :data="data"
                   />
                 </template>
 
