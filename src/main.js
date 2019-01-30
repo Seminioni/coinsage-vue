@@ -1,4 +1,3 @@
-import VueCarousel from 'vue-carousel';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -7,7 +6,6 @@ import '@/assets/stylesheets/app.scss';
 
 Vue.config.productionTip = false;
 
-Vue.use(VueCarousel);
 
 new Vue({
   router,

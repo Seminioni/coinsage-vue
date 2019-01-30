@@ -1,0 +1,18 @@
+dependencies:
+  vue2-siema: 0.2.2
+packages:
+  /siema/1.5.1:
+    dev: false
+    resolution:
+      integrity: sha1-7/MSt36DQPpNgdXQU+u+uRE/+Ig=
+  /vue2-siema/0.2.2:
+    dependencies:
+      siema: 1.5.1
+    dev: false
+    resolution:
+      integrity: sha512-fxEwIjCqZw7clC+eUlyCnh5whPswxNW4D2a8GjK95/H0VyX90lYy40+5Wv21J2/K6UyIBs12yv+TRzMOz3IL0g==
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  vue2-siema: ^0.2.2

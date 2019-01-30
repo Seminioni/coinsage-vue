@@ -1,34 +1,111 @@
 <template>
-  <div class="catalog-item-wr">
+  <div
+    ref="catalog-item-wr"
+    class="catalog-item-wr"
+    @mouseenter="mouseEnterHandler()"
+    @mouseleave="mouseLeaveHandler()"
+  >
     <div class="catalog-item">
-      <slick
-        ref="slick"
+      <a
+        href="catalogItemInner.html"
+        class="catalog-item__img"
       >
-        <a
-          href="http://placehold.it/2000x1000"
-        ><img
-          src="http://placehold.it/2000x1000"
-          alt=""
-        ></a>
-        <a href="http://placehold.it/2000x1000"><img
-          src="http://placehold.it/2000x1000"
-          alt=""
-        ></a>
-      </slick>
 
+        <siema
+          ref="siema"
+          class="siema"
+        >
+          <img
+            src="@/images/content/content-3.png"
+            alt=""
+          >
+
+          <img
+            src="@/images/content/content-3.png"
+            alt=""
+          >
+
+          <img
+            src="@/images/content/content-3.png"
+            alt=""
+          >
+
+        </siema>
+      </a>
+      <a
+        href="catalogItemInner.html"
+        class="link catalog-item__heading"
+      >США 20 долларов 1905
+      </a>
+      <div class="catalog-item__desc-box">
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Состояние:</span>
+          <span class="catalog-item__value">XF</span>
+        </p>
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Год выпуска:</span>
+          <span class="catalog-item__value">1890</span>
+        </p>
+        <p class="catalog-item__desc-field">
+          <span class="catalog-item__prop">Материал:</span>
+          <span class="catalog-item__value">медь</span>
+        </p>
+        <p
+          class="catalog-item__desc-field"
+        >
+          <span class="catalog-item__prop">Вес:</span>
+          <span class="catalog-item__value">1,28 г</span>
+        </p>
+      </div>
+      <strong class="catalog-item__price catalog-item__price--old-price">59 496 ₽</strong>
+      <a
+        href="catalogItemInner.html"
+        class="link catalog-item__price catalog-item__price--new-price"
+      >59 496 ₽
+      </a>
+      <i
+        class="catalog-item__rare"
+        title="Редкая монета"
+      >
+        <span class="icon-text">редкая монета</span>
+        <span class="sprite icon-diamond">
+          <svg viewBox="0 0 1 1">
+            <use xlink:href="images/svgSprite.svg#icon-diamond" />
+          </svg>
+        </span>
+      </i>
+      <a
+        href="#"
+        class="link-as-icon sprite icon-favorite"
+      >
+        <svg viewBox="0 0 1 1">
+          <use xlink:href="images/svgSprite.svg#icon-favorite" />
+        </svg>
+      </a>
+      <a
+        href="#"
+        class="link-as-icon sprite icon-basket"
+      >
+        <svg viewBox="0 0 1 1">
+          <use xlink:href="images/svgSprite.svg#icon-basket" />
+        </svg>
+      </a>
+      <a
+        href="#"
+        class="icon-cross"
+      />
     </div>
   </div>
 </template>
 
 <script>
-  import Slick from 'vue-slick';
+  import Vue from 'vue';
+  import Siema from 'vue2-siema';
+
+  Vue.use(Siema);
 
   export default {
     name: 'CatalogItem',
-
-    components: {
-      Slick,
-    },
 
     props: {
       data: {
@@ -42,6 +119,18 @@
       console.log(this.data);
     },
 
+    methods: {
+      mouseEnterHandler() {
+        this.$refs['catalog-item-wr'].classList.add('isHovered');
+      },
+      mouseLeaveHandler() {
+        this.$refs['catalog-item-wr'].classList.remove('isHovered');
+      },
+      destroy() {
+        this.$refs.siema.destroy();
+      },
+    },
+
   };
 </script>
 
@@ -53,19 +142,19 @@
   }
 
   .isHovered .catalog-item {
-    /*position: absolute;*/
+    position: absolute;
     /*visibility: hidden;*/
-    /*z-index: 999;*/
+    z-index: 999;
     /*opacity: 0;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
     background-color: #fff;
-    /*top: 0;*/
-    /*width: calc(100% - 24px);*/
-    /*height: 555px;*/
-    /*left: 12px;*/
-    /*display: -webkit-box;*/
-    /*padding: 20px 10px;*/
-    /*transition-property: visibility opacity;*/
+    top: 0;
+    width: calc(100% - 24px);
+    height: 555px;
+    left: 12px;
+    display: -webkit-box;
+    padding: 20px 10px;
+    transition-property: visibility opacity;
   }
 
   //Core styles
